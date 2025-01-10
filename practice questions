@@ -1,0 +1,44 @@
+let a = pareint(prompt("enter a number :"))
+        
+        if(a%2 == 0 || a%3 == 0 && (a % 2==0 && a % 3 ==0)){
+            document.write("number is divible by 2 and 3 both")
+
+        //}
+        //let a = pareInt(prompt("enter a number 1:"))
+        //let b = pareInt(prompt("enter b number 2:"))
+        //let c = pareInt(prompt("enter c number 3:"))
+        //if (a>b && a>c ){
+           // document.write(${a} + is greater number)
+         
+        //}else if(b>a && b>c){
+            //document.write(${b} + is greater number)
+
+        //}else{
+            //document.write(${c} + is greater number)
+        //}
+        let a = parse(prompt("salary"))
+        let b = parse(prompt("year of service"))
+        if(b>10){
+            let c = a*0.5
+            let d = c+a
+            alert("after bouns salary"+d)
+let a=parseInt(prompt("salary"))
+        let b=parseInt(prompt("years of service"))
+        if(b>10){
+            let c=a*0.1
+            let d=c+a
+            alert("after bonus salary"+d)
+        }
+        else if(b>=6 && b<=10){
+            let c=a*0.08
+            let d=c+a
+            alert("after bonus salary"+d)
+        }
+        else if(b<6){
+            let c=a*0.05
+            let d=c+a
+            alert("after bonus salary"+a)
+        }
+        else{
+            alert(a)
+         } 
