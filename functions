@@ -1,0 +1,54 @@
+
+functions:
+1)conditional statements
+2)loops
+1)Afunction is resuable block of code
+2)it can be call any where program
+3)resuable code:using an existing
+key word=function()
+parameters:values(variables)which are declared inside()while definig a functions
+arguments:value where passed
+
+
+ex:
+
+function greeting(){
+   document.write("hi mallesh.")
+  }
+  greeting()
+        </script>
+
+o/p:hi mallesh.
+
+
+ex:
+function g(name){
+    console.log("hello"+name)
+    document.write("hello"+name)
+  }
+  let name=prompt("enter your name")
+o/p:
+ravi
+
+
+
+function add(a,b){
+console.log(a+b)
+}
+add(3,5)
+add(7,3)
+
+
+
+ex:
+function greeting(a,b){
+    return a+b;
+  }
+  let x=parseInt(prompt("Enter the value for a:"))
+  let y=parseInt(prompt("Enter the value for b:"))
+  let z=greeting(x,y);
+  document.write("The sum of two numbers is: "+z);
+
+o/p:
+the sum of two numbers is:1020
+
