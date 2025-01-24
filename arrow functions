@@ -1,0 +1,45 @@
+arrow functions:
+Es6 version 
+more redable and more structure
+anonymous functions(lambda functions)
+without function name but assigned to variables
+
+ex:
+arrow functions without parameters
+let c=()=>{
+console.log("hii ravi")
+}
+c(); 
+
+
+ex:
+let c=(a,b)=>{
+  document.write(a+b,"</br>")
+    }
+    c(10,20);
+    c(30,40);
+
+o/p:
+30
+70
+
+ex:
+  let age=18;
+    let welcome=(age<18)?()=>document.write("ravi"):
+    ()=>document.write("hi yash");
+    welcome();
+  
+o/p:
+hi yash
+
+
+ex:
+document.write("hi raviteja");
+  setTimeout(()=>{
+    document.write("hi I am waiting")
+  },5000);
+  document.write("hi I am boiling")
+
+0/p:
+hi raviteja hi I am boiling
+
