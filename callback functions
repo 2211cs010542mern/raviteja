@@ -1,0 +1,89 @@
+callback function:
+you can pass the call back function as argument to another function 
+execution:the function receiving the call back will be execute the callback at same point executions
+
+ex:
+fuction mainFunction(callback){
+console.log("executing main function")
+callback();
+}
+mainFunction(callbackFunction);
+
+o/p:
+Executing main function
+a.html:193 Callback function executed
+
+explanation:
+main function takes a callback as parameter callbackfunction is passed to main function,the call  function is called call back function
+
+ex:2
+function greet(name,callback){
+    console.log("Hello"+name );
+    callback();
+  }
+  function sayGoodbye(){
+    console.log("Goodbye Venky");
+    }
+    greet("Venky",sayGoodbye);
+
+o/p:
+HelloVenky
+a.html:201 Goodbye ravi
+
+ex:3
+anonymous function call back:
+<script>
+        function greeting(name,callback){
+            document.write("hi kothi!!!"+name);
+        callback();
+        }
+        function saygoodbye(){
+        document.write("Good bye!!!");
+        }
+        greeting("you are good boy" , saygoodbye)
+
+
+    </script>
+0/p:
+hi gani!!!you are good boyGood bye!!!
+
+ex:
+<script>
+        function greeting(name,callback){
+            document.write("hi!!!" +name);
+        callback();
+        }
+        greeting("Raviteja.",function(){
+            document.write("You are very good in coding.");
+        })
+    
+
+    </script>
+o/p:
+hi!!!Raviteja.You are very good in coding.
+
+ex:
+a synchronous callback with set timeout:
+code:
+function fetchData(callback){
+console.log("fetching data...")
+}
+setTimeout(function()){
+console.log("data fetched..");
+call back()
+
+ex:
+<script>
+        function greeting(name,callback){
+            document.write("hi!!!" +name);
+        callback();
+        }
+        greeting("Raviteja.",function(){
+            document.write("You are very good in coding.");
+        })
+    
+
+    </script>
+o/p:
+hi!!!Raviteja.You are very good in coding.
+
