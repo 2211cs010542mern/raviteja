@@ -1,0 +1,93 @@
+promise:
+#A promise is a special javascript object tht represents the eventual completion of an synchronous operation.
+
+1)three states
+1)pending:the intial state,the promise is still waiting operation to finish
+2)fulfilled:the opreration c ompleted successfully
+3)rejected:the operation is failed
+
+
+exp:
+to create a promise new promise();
+the promise constructortake function with two parameter
+resolve: to mark promise successful
+reject: to mark is failed 
+handling:
+then()method  is called when promise is fulfilled
+it receive resolve()
+catch():method promise is rejected:
+it receive the result from reject():
+
+ex:
+let myPromise= new Promise((resolve ,reject) =>{
+  let success = true
+  if(success){
+    resolve("The operation was successfully")
+  }else{
+    reject("The operation failed")
+  }
+
+});
+myPromise
+.then(result=>{
+  console.log(result)
+})
+.catch(error =>{
+  console.log(error)
+})
+
+o/p:The operation was successfully
+
+
+chaining promise:
+you can have chain multiple.then()
+
+ex:
+let promise=new Promise((reslove,reject)=>{
+            reslove(5)
+           });
+           promise
+            .then(result=>{
+               document.write(result,"<br>")
+               return result*2
+            })
+            .then(result=>{
+               document.write(result,"<br>")
+               return result+3
+            })
+            .catch(error=>{
+               document.write(error)
+            })
+
+o/p:
+5
+10
+
+
+1)promise with set timeout
+using set time out the promise will resolve after certain amount of time 3
+
+
+ex:
+let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve(10);
+    }, 2000); // Delay of 2 seconds
+});
+
+promise
+    .then(result => {
+        document.write(result, "<br>");
+        return result * 3;
+    })
+    .then(result => {
+        document.write(result, "<br>");
+        return result + 5;
+    })
+    .catch(error => {
+        document.write(error);
+    });
+
+o/p:
+10
+30
