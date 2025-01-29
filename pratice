@@ -1,0 +1,95 @@
+
+Get element class name:
+Return all the element having same name
+Get element by className()-method returns as html collection object
+ 
+An html collection is array like list of html length property
+
+Ex:
+<body>
+<h1 class="a">malli</h1>
+<h1 class="b">nani</h1>
+<h1 class="c">gopi</h1>
+<h1 class="d">yash</h1>
+    <script>
+    let x=document.getElementsByClassName('a');
+    document.write(x);
+    for(let i=0;i<x.length;i++){
+        document.write(x[i])
+    }
+
+</script>
+
+</body>
+Getting element by tag name:
+Get ElementbyTagName();
+
+o/p:
+malli
+nani
+gopi
+yash
+[object HTMLCollection][object HTMLHeadingElement]
+
+From <http://127.0.0.1:5500/a.html> 
+
+Ex:
+
+ <h1 class="a">malli</h1>
+    <h1 class="b">nani</h1>
+    <h1 class="c">ravi</h1>
+    <h1 class="d">yash</h1>
+        <script>
+        let x=document.getElementsByTagName('h1');
+        document.write(x);
+        for(let i=0;i<x.length;i++){
+            document.write(x[i])
+        }
+    
+o/p:
+malli
+nani
+ravi
+yash
+[object HTMLCollection][object HTMLHeadingElement][object HTMLHeadingElement][object HTMLHeadingElement][object HTMLHeadingElement]
+
+From <http://127.0.0.1:5500/a.html> 
+
+
+
+Query selector :
+Query selector  is a used to select html element by its class name tag name,it selects only the first element
+
+ <h1 class="a">malli</h1>
+    <h1 class="b">nani</h1>
+    <h1 class="c">ravi</h1>
+    <h1 class="d">yash</h1>
+        <script>
+        let x=document.getElementsByQuerySelector('a');
+        document.write(x);
+      
+    
+o/p:
+malli
+nani
+ravi
+yash
+
+From <http://127.0.0.1:5500/a.html> 
+
+Query selector 
+Ex:
+    <h1 class="a">malli</h1>
+    <h1 class="b">nani</h1>
+    <h1 class="c">ravi</h1>
+    <h1 class="d">yash</h1>
+        <script>
+        let x=document.getElementsByQuerySelectorall('h1');
+        document.write(x);
+
+
+Manipulate elements:
+
+createElement()
+Document create element()
+The method takes an html elements
