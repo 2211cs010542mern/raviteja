@@ -1,0 +1,72 @@
+DOM:method
+1)createelement(single,multiple)
+Ex:
+
+ <div id="a">
+    <h1>VENKATESH</h1>
+    <h1>GANESH</h1>
+</div>
+<div id="b">
+    <h1 id="r">RAVI</h1>
+    <h1 >GOPI</h1>
+    <h1>NANI</h1>
+    
+</div>
+<script>
+    let n=document.createElement('h1')
+    n.textContent="MALLI"
+    let p=document.getElementById('b')
+    let l=document.getElementById('r')
+    p.insertBefore(n,l)
+</script>
+o/p:
+VENKATESH
+GANESH
+MALLI
+RAVI
+GOPI
+NANI
+
+From <http://127.0.0.1:5500/training/dom.html> 
+
+
+Dom insert:
+
+
+<div id="a">
+    <h1>VENKATESH</h1>
+    <h1>GANESH</h1>
+</div>
+<div id="b">
+    <h1 id="r">RAVI</h1>
+    <h1 >GOPI</h1>
+    <h1 id="c">Anwar</h2>
+    <h1>NANI</h1>
+    
+</div>
+<script>
+    let nn=document.createElement('h1')
+    nn.textContent="Narender"
+    let pp=document.getElementById('b')
+    let ll=document.getElementById('c')
+    pp.insertBefore(nn,ll)
+</script>
+
+o/p;
+VENKATESH
+GANESH
+RAVI
+GOPI
+Narender
+Anwar
+NANI
+
+From <http://127.0.0.1:5500/training/dom.html> 
+Remove element:
+
+Let b=document.getelementbyid('e)
+b.remove()
+
+To remove child element:
+
+Removechild();
