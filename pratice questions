@@ -1,0 +1,54 @@
+Java script practice questions:
+
+
+    let age = parseInt(prompt("Enter your age:"))
+        
+    if(age>=18 ){
+        let citizen = confirm("Are you a citizen?")
+    let passedCitizenTest = confirm("Have you passed citizen test?")
+        document.write("You are eligible to vote")
+        
+        if(age>=18 && !citizen && passedCitizenTest){
+            document.write("You are eligible to vote")
+        }
+        
+    }else{
+        document.write("You are not eligible to vote")
+    }
+o/p:
+Enter your age:19
+You are eligible to vote
+
+From <http://127.0.0.1:5500/training/dom.html> 
+
+
+Discount eligiblity
+An online store offer a discount system based following conditions:
+1)a customer who spend more than rs:100 get a 20%discount
+2)a customer who spends more than rs:50 but less than or equal to rs:100 get a 10%discount
+3)if customer is premimum member they recevie an extra 5% discount
+
+Ex:
+let amount=prompt("Enter the amount customer spends")
+    if(amount>100){
+        let discount=amount*0.2
+        let final=amount-discount
+        document.write("The final bill is:"+final)
+    }
+    else if(amount>50 && amount<=100){
+        let discount=amount*0.1
+        let final=amount-discount
+        document.write("The final bill is:"+final)
+    }
+    let customer=confirm("are you premium number?")
+    if(customer){
+        let discount=amount*0.05
+        let final=amount-discount
+        document.write("The final bill is:"+final)
+
+    }
+o/p:
+The final bill is:800The final bill is:950
+
+From <http://127.0.0.1:5500/training/dom.html> 
+
