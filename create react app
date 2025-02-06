@@ -1,0 +1,37 @@
+
+Create react app
+Empty folder
+Npx
+Project folder:
+Public/index.html:the main html file that services as the entry point for the app
+
+Ex:
+App.js
+
+import React from 'react';
+import './App.css';
+
+const Welcome=()=> <h1 className='message'>Hello Ravi</h1>
+function App() {
+  return(
+    <div className="App">
+    <Welcome/> </div>
+  )
+}
+export default App;
+
+o/p:
+Hello ravi
+
+
+
+App.css
+.message{
+  color:green;
+  background-color:aquamarine;
+  font-size:40px;
+  text-align:center;
+  width:30%;
+  margin-left:80px;
+}
+
