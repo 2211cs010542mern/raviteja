@@ -1,0 +1,69 @@
+
+Greeting.js
+import React from "react";
+
+function Greeting({ isLoggedIn }) {
+    if (isLoggedIn) {
+        return <h1>Welcome back!</h1>;
+    } else {
+        return <h1>Please sign in.</h1>;
+    }
+}
+
+export default Greeting;
+
+
+App.js:
+
+app.js import React from "react";
+import Greeting from "./Greeting";
+
+function App() {
+    const isLoggedIn= false;
+
+    return (
+        <div className="App">
+          <Greeting isLoggedIn={isLoggedIn} />
+            
+        </div>
+    );
+}
+
+export default App;
+
+o/p:
+Please sign in.
+App.js:
+import React from "react";
+import FruitList from "./FruitList";
+function App() {
+    return (
+        <div className="App">
+          <FruitList></FruitList>
+            
+        </div>
+    );
+}
+export default App;
+
+
+Fruit.js
+const FruitList=()=>{
+  const fruits=['apple','banana','cherry'];
+  return(
+    <div>
+      <h1>Fruits List</h1>
+      <ul>
+        {fruits.map((fruit,index)=>
+        <li key={index}>{fruit}</li>
+        )}
+      </ul>
+    </div>
+    );
+}
+o/p:
+Fruits List
+	• apple
+	• banana
+	• cherry
+
