@@ -1,0 +1,85 @@
+React hooks:
+->introduced on react 16.8version..
+->to manage state and lifecycle features in functional components..
+State:
+It is essential part in react beacuase it allows components to be dynimically and capable of responding to user input 
+Or change over time..
+
+#static
+#dynamic
+1.usestatichook:
+Usestate allows you add state to functional components…
+Syntx:const[state,setstate]=usestate(initial value)
+State:current state
+Setstate:function to update the state
+Initial values:the values you want to set as intial
+
+
+APP.JS:
+
+import React, { useState } from "react";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div style={{ textAlign: "center", marginTop: "50px", fontFamily: "Arial, sans-serif" }}>
+      <h2>Count: {count}</h2>
+      <button 
+        onClick={() => setCount(count + 1)} 
+        style={{ margin: "5px", padding: "10px", fontSize: "16px", cursor: "pointer" }}
+      >
+        Increment
+      </button>
+      <button 
+        onClick={() => setCount(count - 1)} 
+        style={{ margin: "5px", padding: "10px", fontSize: "16px", cursor: "pointer" }}
+      >
+        Decrement
+      </button>
+    </div>
+  );
+};
+
+export default App;
+
+APP.CSS:
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+  font-family: Arial, sans-serif;
+  background-color: green;
+}
+.count {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: aqua;
+  border-radius: 5px;
+}
+button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  background-color: orange;
+}
+.increment {
+  background-color: blue;
+  color: beige;
+}
+.increment:hover {
+  background-color: gold;
+}
+.decrement {
+  background-color:red;
+  color: white;
+}
+.decrement:hover {
+  background-color: black;
+}
