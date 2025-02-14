@@ -1,0 +1,95 @@
+
+React reducer:
+
+APP.JS:
+import React, { useReducer } from "react";
+import "./App.css";
+
+function appleReducer(state = 3, action) {
+  switch (action.type) {
+    case "ADD_APPLE":
+      return state + 1;
+    case "EAT_APPLE":
+      return state > 0 ? state - 1 : state;
+    default:
+      return state;
+  }
+}
+
+function App() {
+  const [state, dispatch] = useReducer(appleReducer, 3);
+
+  return (
+    <div className="container">
+      <h1>Apple Counter</h1>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg" alt="Apple" className="apple-image" />
+      <p>Number Of Apples: {state}</p>
+      <button onClick={() => dispatch({ type: "ADD_APPLE" })}>ADD APPLE</button>
+      <button onClick={() => dispatch({ type: "EAT_APPLE" })}>EAT APPLE</button>
+    </div>
+  );
+}
+
+export default App;
+
+
+APP.CSS:
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.apple-image {
+  display: block;
+  margin: 20px auto;
+  width: 100px;
+  border-radius: 20px;
+  height: auto;
+}
+
+button {
+  background: #ff9800;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 152, 0, 0.7);
+}
+
+button:hover {
+  background: #e68900;
+  box-shadow: 0 0 20px rgba(255, 152, 0, 1);
+  transform: scale(1.1);
+}
+
